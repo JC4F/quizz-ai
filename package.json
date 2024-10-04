@@ -1,16 +1,19 @@
 {
-  "name": "with-docker",
+  "name": "quizz-ai",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
+    "cleandep": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "test": "turbo run test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dev:nextjs": "turbo dev --filter nextjs"
+  },
   "devDependencies": {
     "prettier": "^3.2.5",
     "turbo": "^2.1.3"
